@@ -39,24 +39,26 @@ def prepare_data(data_dir, output_dir, pipeline = "cpac", quality_checked = True
         print("Feature file found.")
 
     except: # if not, extract features
-        X_features = [] # here is where we will put the data (a container)
+        X_features_2d = [] # To contain data in the form of 2d matrix
+        X_features = [] # To contain upper half of matrix as 1d array 
         print("No feature file found. Extracting features...")
+        
         for i,sub in enumerate(fmri_filenames):
             # extract the timeseries from the ROIs in the atlas
             time_series = masker.fit_transform(sub)
             # create a region x region correlation matrix
             correlation_matrix = correlation_measure.fit_transform([time_series])[0]
-            # add to our container
-            X_features.append(correlation_matrix)
+            # Extract upper half of matrix
+            correlation_matrix_1d=list(correlation_matrix[np.triu_indices(64)]) 
+            # add to our containers
+            X_features_2d.append(correlation_matrix) # add 2d matrix (64 , 64)
+            X_features.append(correlation_matrix_1d) # add 1d array of half matrix (2080, )
             # keep track of status
             print('finished extracting %s of %s'%(i+1,len(fmri_filenames)))
 
-    # Extract half of the matrix for each subject -> (871, 4096) to (871, 2080)
-    for i in range(len(X_features)):
-        X_features[i]=list(X_features[i][np.triu_indices(64)])
-    i=i+1
-
     # Save features
+    np.savez_compressed(os.path.join(output_dir, 'ABIDE_BASC064_features_2d'),
+                            a = X_features_2d)
     np.savez_compressed(os.path.join(output_dir, 'ABIDE_BASC064_features'),
                             a = X_features)
 
@@ -66,7 +68,6 @@ def prepare_data(data_dir, output_dir, pipeline = "cpac", quality_checked = True
 
     #print("original shape: ", X_features.shape)
     #print("transformed shape:", X_features_pca.shape)
-
 
     # Transform phenotypic data into dataframe
     abide_pheno=pd.DataFrame(abide.phenotypic)
