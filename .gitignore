@@ -130,3 +130,6 @@ dmypy.json
 
 # Nilearn cache data
 nilearn_cache/
+
+#DS_Store (Mac)
+.DS_Store
