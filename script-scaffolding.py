@@ -31,32 +31,33 @@ def prepare_data(data_dir, output_dir, pipeline = "cpac", quality_checked = True
     correlation_measure = ConnectivityMeasure(kind='correlation', vectorize=True,
                                              discard_diagonal=True)
 
-    all_features = [] # here is where we will put the data (a container)
-
-    print("Extracting features...")
-    for i,sub in enumerate(fmri_filenames):
-        # extract the timeseries from the ROIs in the atlas
-        time_series = masker.fit_transform(sub)
-        # create a region x region correlation matrix
-        correlation_matrix = correlation_measure.fit_transform([time_series])[0]
-        # add to our container
-        all_features.append(correlation_matrix)
-        # keep track of status
-        print('finished extracting %s of %s'%(i+1,len(fmri_filenames)))
-
-    # save features
-    np.savez_compressed(os.path.join(output_dir, 'ABIDE_BASC064_features'),
-                        a = all_features)
-    # load features
-    feat_file = os.path.join(output_dir, 'ABIDE_BASC064_features.npz')
-    X_features = np.load(feat_file)['a']
+    try: # check if feature file already exists
+        # load features
+        feat_file = os.path.join(output_dir, 'ABIDE_BASC064_features.npz')
+        X_features = np.load(feat_file)['a']
+        print("Feature file found.")
+    except: # if not, extract features
+        X_features = [] # here is where we will put the data (a container)
+        print("No feature file found. Extracting features...")
+        for i,sub in enumerate(fmri_filenames):
+            # extract the timeseries from the ROIs in the atlas
+            time_series = masker.fit_transform(sub)
+            # create a region x region correlation matrix
+            correlation_matrix = correlation_measure.fit_transform([time_series])[0]
+            # add to our container
+            X_features.append(correlation_matrix)
+            # keep track of status
+            print('finished extracting %s of %s'%(i+1,len(fmri_filenames)))
+        # save features
+        np.savez_compressed(os.path.join(output_dir, 'ABIDE_BASC064_features'),
+                            a = X_features)
 
     # get target variable from csv
     phenotypic = pd.read_csv(os.path.join(data_dir, "ABIDE_pcp",
                                           "Phenotypic_V1_0b_preprocessed1.csv"))
 
-    file_ids = []
     # get the file IDs from the file names
+    file_ids = []
     for f in fmri_filenames:
         file_ids.append(f[-27:-20])
 
