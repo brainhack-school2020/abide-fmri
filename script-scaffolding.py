@@ -3,6 +3,7 @@
 from nilearn import datasets
 from nilearn.input_data import NiftiLabelsMasker
 from nilearn.connectome import ConnectivityMeasure
+from argparse import ArgumentParser
 import numpy as np
 import os
 import pandas as pd
@@ -12,7 +13,7 @@ def prepare_data(data_dir, output_dir, pipeline = "cpac", quality_checked = True
     print("Loading dataset...")
     abide = datasets.fetch_abide_pcp(data_dir = data_dir,
                                      pipeline = pipeline,
-                                     quality_checked = qc)
+                                     quality_checked = quality_checked)
     # make list of filenames
     fmri_filenames = abide.func_preproc
 
@@ -68,7 +69,20 @@ def prepare_data(data_dir, output_dir, pipeline = "cpac", quality_checked = True
 
     return(X_features, y_target)
 
-def run_analysis(X_features, y_target):
+def run_analysis():
+    description = "Train classifier on the ABIDE data to predict autism"
+    parser = ArgumentParser(__file__, description)
+    parser.add_argument("data_dir", action = "store",
+                        help = """Path to the data directory that contains the
+                        ABIDE data set. If you already have the data set, this
+                        should be the folder that contains the subfolder
+                        'ABIDE_pcp'. If this folder does not exists yet, it will
+                        be created in the directory you provide.""")
+    parser.add_argument("output_dir", action = "store",
+                        help = """Path to the directory where you want to store
+                        outputs.""")
+    args = parser.parse_args()
+    X_features, y_target = prepare_data(args.data_dir, args.output_dir)
     print("analyzing...")
     # TODO: split the data into training and test set
 
@@ -76,6 +90,5 @@ def run_analysis(X_features, y_target):
 
     # TODO: train model(s)
 
-if __name__ = "__main__":
-    X_features, y_target = prepare_data()
-    run_analysis(X_features = X_features, y_target = y_target)
+if __name__ == "__main__":
+    run_analysis()
