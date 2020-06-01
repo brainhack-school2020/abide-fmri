@@ -5,6 +5,7 @@ from nilearn.input_data import NiftiLabelsMasker
 from nilearn.connectome import ConnectivityMeasure
 from argparse import ArgumentParser
 import numpy as np
+from sklearn.decomposition import PCA
 import os
 import pandas as pd
 
@@ -36,6 +37,7 @@ def prepare_data(data_dir, output_dir, pipeline = "cpac", quality_checked = True
         feat_file = os.path.join(output_dir, 'ABIDE_BASC064_features.npz')
         X_features = np.load(feat_file)['a']
         print("Feature file found.")
+        
     except: # if not, extract features
         X_features = [] # here is where we will put the data (a container)
         print("No feature file found. Extracting features...")
@@ -48,27 +50,30 @@ def prepare_data(data_dir, output_dir, pipeline = "cpac", quality_checked = True
             X_features.append(correlation_matrix)
             # keep track of status
             print('finished extracting %s of %s'%(i+1,len(fmri_filenames)))
-        # save features
-        np.savez_compressed(os.path.join(output_dir, 'ABIDE_BASC064_features'),
+            
+     # Extract half of the matrix for each subject -> (871, 4096) to (871, 2080)
+     for i in range (len(X_features)):
+            X_features[i]=list(X_features[i][np.triu_indices(64)])
+     i=i+1
+        
+     # Save features
+     np.savez_compressed(os.path.join(output_dir, 'ABIDE_BASC064_features'),
                             a = X_features)
+    
+    # Dimensionality reduction of features with PCA 
+    pca = PCA(0.99).fit(X_features) # keeping 99% of variance
+    X_features_pca = pca.transform(X_features)
+    
+    #print("original shape: ", X_features.shape)
+    #print("transformed shape:", X_features_pca.shape)
 
-    # get target variable from csv
-    phenotypic = pd.read_csv(os.path.join(data_dir, "ABIDE_pcp",
-                                          "Phenotypic_V1_0b_preprocessed1.csv"))
-
-    # get the file IDs from the file names
-    file_ids = []
-    for f in fmri_filenames:
-        file_ids.append(f[-27:-20])
-
-    # extract info about ASD for each participant
-    y_target = []
-    for i in range(len(phenotypic)):
-        for j in range(len(file_ids)):
-            if file_ids[j] in phenotypic.FILE_ID[i]:
-                y_target.append(phenotypic.DX_GROUP[i])
-
-    return(X_features, y_target)
+    
+    # Transform phenotypic data into dataframe
+    abide_pheno=pd.DataFrame(abide.phenotypic)
+    
+    # Get the target vector
+    y_target= abide_pheno['DX_GROUP']
+    
 
 def run_analysis():
     description = "Train classifier on the ABIDE data to predict autism"
@@ -83,7 +88,7 @@ def run_analysis():
                         help = """Path to the directory where you want to store
                         outputs.""")
     args = parser.parse_args()
-    X_features, y_target = prepare_data(args.data_dir, args.output_dir)
+    X_features_pca, y_target = prepare_data(args.data_dir, args.output_dir)
     print("analyzing...")
     # TODO: split the data into training and test set
 
