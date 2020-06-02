@@ -82,7 +82,9 @@ def run():
                         help = """Path to the directory where you want to store
                         outputs.""")
     args = parser.parse_args()
-    #X_features_pca, y_target = prepare_data(args.data_dir, args.output_dir)
+    X_features_pca, y_target = prepare_data(args.data_dir, args.output_dir)
+    
+    return(X_features, y_target)
 
 
 if __name__ == "__main__":
