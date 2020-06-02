@@ -69,8 +69,8 @@ def prepare_data(data_dir, output_dir, pipeline = "cpac", quality_checked = True
     return(X_features_pca, y_target)
 
 
-def run_analysis():
-    description = "Train classifier on the ABIDE data to predict autism"
+def run():
+    description = "Prepare data for classifier on the ABIDE data to predict autism"
     parser = ArgumentParser(__file__, description)
     parser.add_argument("data_dir", action = "store",
                         help = """Path to the data directory that contains the
@@ -83,12 +83,9 @@ def run_analysis():
                         outputs.""")
     args = parser.parse_args()
     X_features_pca, y_target = prepare_data(args.data_dir, args.output_dir)
-    print("Analyzing...")
-    # TODO: split the data into training and test set
+    
+    return(X_features, y_target)
 
-    # TODO: specify model(s)
-
-    # TODO: train model(s)
 
 if __name__ == "__main__":
-    run_analysis()
+    run()
