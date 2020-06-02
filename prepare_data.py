@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/Users/emilychen/miniconda3 python
 
 from nilearn import datasets
 from nilearn.input_data import NiftiLabelsMasker
