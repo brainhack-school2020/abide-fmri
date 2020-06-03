@@ -17,11 +17,11 @@ where
 - `data_dir` is the directory where you want to save the data or have it already saved and
 - `output_dir` is the directory where you want to store the outputs the script generates.
 
-The notebooks also call the function from the preparation script.
+The notebooks also call the `prepare_data` function from the preparation script.
 
 ### Using venv
 
-To make sure that all scripts work correctly, you can create a virtual environment using pythons built-in library venv. To do this, follow these steps:
+To make sure that all scripts work correctly, you can create a virtual environment using pythons built-in library `venv`. To do this, follow these steps:
 
 1. Clone repo and navigate to folder in a shell
 1. Create a virtual environment in a folder of your choice: `python -m venv /path/to/folder`
