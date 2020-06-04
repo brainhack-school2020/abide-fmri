@@ -1,6 +1,31 @@
 # abide-fmri
 Repository for the Brainhack School 2020 team working with fMRI and ABIDE data to train machine learning models. 
 
+## The goal
+
+The goal of this project is to compare different machine learning models and cross-validation methods and see how well each is able to predict autism from resting state fMRI data. For that we are using the [ABIDE data set](http://fcon_1000.projects.nitrc.org/indi/abide/) which combines data from 20 different research sites.
+
+## Project structure
+
+The data are processed in a standardized way using a Python script that prepares the data for the machine learning classifier. Several Jupyter notebooks then implement different models and cross-validation techniques which are described in detail below.
+
+### The preparation script
+
+*prepare_data.py*
+
+This script
+
+- downloads the data
+- extracts the time series of 64 regions of interest defined by the BASC brain atlas
+- computes the correlations between time series for each participant
+- uses a principal component analysis for dimensionality reduction
+
+### Leave-site-out cross-validation
+
+*leave-site-out-cv_classifier.ipynb*
+
+This notebook contains code to run a linear support vector classification to predict autism from resting state data. It uses leave-group-out cross-validation using site as the group variable. The results give a good estimate of how stable the model is. While for most of the sites the prediction works above chance, for some autism is predicted only at chance or even below chance.
+
 ## How to run
 
 This repository contains several python scripts that train different classifiers with different cross-validation techniques on the ABIDE data set to predict autism from resting state fMRI data.
