@@ -133,3 +133,6 @@ dmypy.json
 
 #Py cache
 __pycache__
+
+#Nilearn cache 
+nilearn_cache
