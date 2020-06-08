@@ -26,6 +26,11 @@ This script
 
 This notebook contains code to run a linear support vector classification to predict autism from resting state data. It uses leave-group-out cross-validation using site as the group variable. The results give a good estimate of how stable the model is. While for most of the sites the prediction works above chance, for some autism is predicted only at chance or even below chance.
 
+### K-fold and leave-one-out cross-validation
+*kfold_LeaveOneOut_cv_classifier.ipynb*
+
+This notebook contains the code to run support vector classification, k neirest neighbors, decision tree and random forest on the Abide dataset. The models are trained and evaluated using k-fold and leave-one out cross-validation methods. We obtain accuracy scores that represent how skilled the model is at predicting the labels of unseen data.  Leave-ont out cross validation gives more accurate predictions than kfold cross validation. The accuracy values range from 55.8% to 69.2%.
+
 ## How to run
 
 This repository contains several python scripts that train different classifiers with different cross-validation techniques on the ABIDE data set to predict autism from resting state fMRI data.
@@ -56,3 +61,8 @@ To make sure that all scripts work correctly, you can create a virtual environme
 5. Open a jupyter notebook: `jupyter-notebook`, then click the notebook you want to run
 6. Select different kernel by clicking *Kernel -> Change Kernel -> abide-ml*
 7. Run the code!
+
+## Week 3 Deliverable: Data Visualization
+* [Emily's GitHub Repository](https://github.com/emilyemchen/bhs2020-dataviz)
+* [Andréanne's GitHub Repository](https://github.com/brainhack-school2020/anproulx-fMRI-autism)
+* [Mikkel's GitHub Repository](https://github.com/brainhack-school2020/mschoettner_fMRI-ML), [link to the plot](https://mschoettner.github.io/brainhack_visualization/)
