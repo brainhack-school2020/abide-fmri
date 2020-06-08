@@ -61,3 +61,8 @@ To make sure that all scripts work correctly, you can create a virtual environme
 5. Open a jupyter notebook: `jupyter-notebook`, then click the notebook you want to run
 6. Select different kernel by clicking *Kernel -> Change Kernel -> abide-ml*
 7. Run the code!
+
+## Week 3 Deliverable: Data Visualization
+* ![Emily's GitHub Repository]()
+* ![Andréanne's GitHub Repository]()
+* ![Mikkel's GitHub Repository]()
