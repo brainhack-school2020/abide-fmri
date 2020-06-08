@@ -24,7 +24,7 @@ This script
 
 *leave-site-out-cv_classifier.ipynb*
 
-This notebook contains code to run a linear support vector classification to predict autism from resting state data. It uses leave-group-out cross-validation using site as the group variable. The results give a good estimate of how stable the model is. While for most of the sites the prediction works above chance, for some autism is predicted only at chance or even below chance.
+This notebook contains code to run a linear support vector classification to predict autism from resting state data. It uses leave-group-out cross-validation using site as the group variable. The results give a good estimate of how stable the model is. While for most of the sites the prediction works above chance level, for some, autism is predicted only at or even below chance level.
 
 ### K-fold and leave-one-out cross-validation
 *kfold_LeaveOneOut_cv_classifier.ipynb*
