@@ -63,6 +63,6 @@ To make sure that all scripts work correctly, you can create a virtual environme
 7. Run the code!
 
 ## Week 3 Deliverable: Data Visualization
-* ![Emily's GitHub Repository]()
+* ![Emily's GitHub Repository](https://github.com/emilyemchen/bhs2020-dataviz)
 * ![Andréanne's GitHub Repository]()
 * ![Mikkel's GitHub Repository]()
