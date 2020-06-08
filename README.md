@@ -65,4 +65,4 @@ To make sure that all scripts work correctly, you can create a virtual environme
 ## Week 3 Deliverable: Data Visualization
 * [Emily's GitHub Repository](https://github.com/emilyemchen/bhs2020-dataviz)
 * [Andréanne's GitHub Repository](https://github.com/brainhack-school2020/anproulx-fMRI-autism)
-* [Mikkel's GitHub Repository]()
+* [Mikkel's GitHub Repository](https://github.com/brainhack-school2020/mschoettner_fMRI-ML), [link to the plot](https://mschoettner.github.io/brainhack_visualization/)
