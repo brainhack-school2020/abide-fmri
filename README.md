@@ -10,7 +10,7 @@ Repository for the Brainhack School 2020 team working with resting state fMRI da
 
 ### Personal Backgrounds
 
-#### Emily
+#### Emily 
 Hello! I am an (incoming) fourth year undergraduate student at McGill University studying computer science and urban health geography with a minor in cognitive science. I am a research assistant with Isabelle Arseneau-Bruneau in the Zatorre Lab and have been learning a lot about neuroscience research while (hopefully) lending some of my technical skills to Isabelle's PhD work exploring the effect of musical training on FFR. 
 
 When joining the BrainHack School, I was looking forward in particular to working on a project at the intersection of neuroscience and CS because my previous classes rarely focused on the application of the abstract concepts we learned. Upon completion of the BrainHack School, I had the opportunity to learn from and collaborate with talented neuroscience researchers and participants, write a machine learning script using python and neuroscience data, and gain hands-on practice in reproducibility efforts and good project management. 
@@ -19,7 +19,7 @@ You can find me on GitHub at [emilyemchen](https://github.com/emilyemchen) and o
 
 #### Andréanne
 
-I am a Master's student in Psychology currently enrolled at the University of Montreal. My main focus is in genomic imagery which consists of investigating the effect of genetic mutations on fonctional and structural brain phenotypes. More specifically, I have been interested in resting-state functional connectivity measures in carrier populations.
+I am a Master's student in Psychology currently enrolled at the University of Montréal. My main focus is in genomic imagery which consists of investigating the effect of genetic mutations on fonctional and structural brain phenotypes. More specifically, I have been interested in resting-state functional connectivity measures in carrier populations.
 
 #### Mikkel
 
@@ -29,7 +29,7 @@ I am a Master's student in Psychology currently enrolled at the University of Mo
 
 #### Emily
 
-I planned to work with the following tools and technologies: 
+My project planned to incorporate the following tools and technologies: 
 
 * Python
 * `nilearn`
@@ -81,20 +81,23 @@ The data are processed in a standardized way using a Python script that prepares
 
 #### Deliverable 1: Jupyter notebooks
 
-##### Leave-site-out cross-validation
+* ##### Leave-site-out cross-validation
 
 [*`leave-site-out-cv_classifier.ipynb`*](https://github.com/brainhack-school2020/abide-fmri/blob/master/code/leave-site-out-cv_classifier.ipynb)
 
 This notebook contains code to run a linear support vector classification to predict autism from resting state data. It uses leave-group-out cross-validation using site as the group variable. The results give a good estimate of how stable the model is. While for most of the sites the prediction works above chance level, for some, autism is predicted only at or even below chance level.
 
-### K-fold and leave-one-out cross-validation
-*kfold_LeaveOneOut_cv_classifier.ipynb*
+* ##### K-fold and leave-one-out cross-validation
 
-This notebook contains the code to run support vector classification, k neirest neighbors, decision tree and random forest on the Abide dataset. The models are trained and evaluated using k-fold and leave-one out cross-validation methods. We obtain accuracy scores that represent how skilled the model is at predicting the labels of unseen data.  Leave-ont out cross validation gives more accurate predictions than kfold cross validation. The accuracy values range from 55.8% to 69.2%.
+[*`kfold-leave-one-out-cv_classifier.ipynb`*](https://github.com/brainhack-school2020/abide-fmri/blob/master/code/kfold-leave-one-out-cv_classifier.ipynb)
 
-##### 
+This notebook contains the code to run support vector classification, k nearest neighbors, decision tree and random forest on the ABIDE dataset. The models are trained and evaluated using k-fold and leave-one out cross-validation methods. We obtain accuracy scores that represent how skilled the model is at predicting the labels of unseen data.  Leave-one out cross validation gives more accurate predictions than kfold cross validation. The accuracy values range from 55.8% to 69.2%.
+
+* ##### Group k-folds cross-validation
 
 [*`group-kfolds-cv_classifier.ipynb`*](https://github.com/brainhack-school2020/abide-fmri/blob/master/code/group-kfolds-cv_classifier.ipynb)
+
+[DESCRIPTION TO DO]
 
 #### Deliverable 2: [*`prepare_data.py`*](https://github.com/brainhack-school2020/abide-fmri/blob/master/code/prepare_data.py) script
 
@@ -105,31 +108,7 @@ This script
 * computes the correlations between time series for each participant
 * uses a principal component analysis for dimensionality reduction
 
-#### Deliverable 3: [*`requirements.txt`*](https://github.com/brainhack-school2020/abide-fmri/blob/master/requirements.txt) file 
-
-
-#### Deliverable 4: Data visualizations (Week 3)
-
-* [Emily's GitHub Repository](https://github.com/emilyemchen/bhs2020-dataviz)
-* [Andréanne's GitHub Repository](https://github.com/brainhack-school2020/anproulx-fMRI-autism)
-* [Mikkel's GitHub Repository](https://github.com/brainhack-school2020/mschoettner_fMRI-ML), [link to the plot](https://mschoettner.github.io/brainhack_visualization/)
-
-
-#### Deliverable 5: Presentation (Week 4)
-
-#### Deliverable 6: Overview of the project and results in the `README.md` file
-
-
-
-## Conclusion and Acknowledgement
-
-
-
-## How to run
-
-This repository contains several python scripts that train different classifiers with different cross-validation techniques on the ABIDE data set to predict autism from resting state fMRI data.
-
-To fetch and prepare the data set you can call the script like this:
+To fetch and prepare the data set you can call the `prepare_data.py` script like this:
 
 `./prepare_data.py data_dir output_dir`
 
@@ -138,22 +117,60 @@ or alternatively:
 `python prepare_data.py data_dir output_dir`
 
 where
-- `data_dir` is the directory where you want to save the data or have it already saved and
-- `output_dir` is the directory where you want to store the outputs the script generates.
+* `data_dir` is the directory where you want to save the data or have it already saved and
+* `output_dir` is the directory where you want to store the outputs the script generates.
 
 The notebooks also call the `prepare_data` function from the preparation script.
 
-### Using `venv`
+#### Deliverable 3: [*`requirements.txt`*](https://github.com/brainhack-school2020/abide-fmri/blob/master/requirements.txt) file 
 
-To make sure that all scripts work correctly, you can create a virtual environment using pythons built-in library `venv`. To do this, follow these steps:
+This file can help ensure that the scripts run correctly on any machine. To make sure that all scripts work correctly, you can create a virtual environment using pythons built-in library `venv`. To do this, follow these steps:
 
 1. Clone repo and navigate to folder in a shell
-1. Create a virtual environment in a folder of your choice: `python -m venv /path/to/folder`
-2. Activate it (bash command, see [here](https://docs.python.org/3/library/venv.html) how to activate in different shells): `source /path/to/folder/bin/activate`
-3. Install all necessary requirements from requirements file: `pip install -r requirements.txt`
-4. Create kernel for jupyter notebooks: `ipython kernel install --user --name=abide-ml`
-5. Open a jupyter notebook: `jupyter-notebook`, then click the notebook you want to run
-6. Select different kernel by clicking *Kernel -> Change Kernel -> abide-ml*
-7. Run the code!
+2. Create a virtual environment in a folder of your choice: `python -m venv /path/to/folder`
+3. Activate it (bash command, see [here](https://docs.python.org/3/library/venv.html) how to activate in different shells): `source /path/to/folder/bin/activate`
+4. Install all necessary requirements from requirements file: `pip install -r requirements.txt`
+5. Create kernel for jupyter notebooks: `ipython kernel install --user --name=abide-ml`
+6. Open a jupyter notebook: `jupyter-notebook`, then click the notebook you want to run
+7. Select different kernel by clicking *Kernel -> Change Kernel -> abide-ml*
+8. Run the code!
 
+#### Deliverable 4: Data visualizations (Week 3)
 
+* [Emily's GitHub Repository](https://github.com/emilyemchen/bhs2020-dataviz)
+    * [Age at Scan Distribution by ABIDE Test Site](https://emilyemchen.github.io/bhs2020-dataviz/abide_age.html)
+
+    <iframe src="https://emilyemchen.github.io/bhs2020-dataviz/abide_age.html" width="800px" height="600px"></iframe>
+
+    * [FIQ Score Distribution by ABIDE Test Site](https://emilyemchen.github.io/bhs2020-dataviz/abide_fiq.html)
+
+    <iframe src="https://emilyemchen.github.io/bhs2020-dataviz/abide_fiq.html" width="800px" height="600px"></iframe>
+
+    * [VIQ Score Distribution by ABIDE Test Site](https://emilyemchen.github.io/bhs2020-dataviz/abide_viq.html)
+
+    <iframe src="https://emilyemchen.github.io/bhs2020-dataviz/abide_viq.html" width="800px" height="600px"></iframe>
+
+    * [PIQ Score Distribution by ABIDE Test Site](https://emilyemchen.github.io/bhs2020-dataviz/abide_piq.html)
+
+    <iframe src="https://emilyemchen.github.io/bhs2020-dataviz/abide_piq.html" width="800px" height="600px"></iframe>
+
+* [Andréanne's GitHub Repository](https://github.com/brainhack-school2020/anproulx-fMRI-autism)
+    * [Various data visualizations](https://chart-studio.plotly.com/~anproulx/2/data-visualization/#/)
+* [Mikkel's GitHub Repository](https://github.com/brainhack-school2020/mschoettner_fMRI-ML)
+    * [Age Distributions at Different Research Sites](https://mschoettner.github.io/brainhack_visualization/)
+
+    <iframe src="https://mschoettner.github.io/brainhack_visualization/" width="800px" height="600px"></iframe>
+
+#### Deliverable 5: Presentation (Week 4)
+
+The presentation slides can be viewed [here](https://www.canva.com/design/DAD-ByEQaXI/QLgHbYgnKd-xDWJXVnaGDA/view) on Canva, which is the platform we used to create the slides. A video of our presentation can be viewed on this project page. We presented our work to the BrainHack School on June 5, 2020 using the RISE integration in a Jupyter notebook, which can be found [here](https://github.com/brainhack-school2020/abide-fmri/tree/master/presentation). 
+
+#### Deliverable 6: Overview of the project and results in the [`README.md`](https://github.com/brainhack-school2020/abide-fmri/blob/master/README.md) file
+
+This `README.md` file contains the content that will be shown on the BrainHack School website [project page](https://school.brainhackmtl.org/project/). 
+
+## Conclusion and Acknowledgement
+
+First and foremost, we would like to thank our Weeks 3 and 4 peer clinic mentor and co-organizer of the Brainhack School, Pierre Bellec. A special thank you as well to our Week 2 mentors Désirée Lussier-Lévesque, Alexa Pichet-Binette, and Sebastian Urchs. 
+
+Thank you also to the leaders and co-organizers Jean-Baptiste Poline, Tristan Glatard, and Benjamin de Leener, as well as the instructors and mentors Karim Jerbi, Elizabeth DuPre, Ross Markello, Peer Herholz, Samuel Guay, Valerie Hayot-Sasson, Greg Kiar, Jake Vogel, and Agâh Karakuzu. 
