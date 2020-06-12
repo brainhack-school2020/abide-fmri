@@ -234,3 +234,5 @@ Thanks to all of you, this school was an amazing learning experience!
 Anderson, J. S., Patel, V. B., Preedy, V. R., & Martin, C. R. (2014). Cortical underconnectivity hypothesis in autism: evidence from functional connectivity MRI. Comprehensive Guide to Autism, 1457, 1471.
 
 Nielsen, J. A., Zielinski, B. A., Fletcher, P. T., Alexander, A. L., Lange, N., Bigler, E. D., ... & Anderson, J. S. (2013). Multisite functional connectivity MRI classification of autism: ABIDE results. Frontiers in Human Neuroscience, 7, 599.
+
+![test](abide-fmri/presentation/slides/1.png)
