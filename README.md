@@ -1,10 +1,11 @@
 # Predicting Autism with fMRI Data
-
 Contributors: Emily Chen, Andréanne Proulx, and Mikkel Schöttner
 
 [ADD PHOTO]
 
 Repository for the Brainhack School 2020 team working with resting state fMRI data from the ABIDE dataset to train machine learning models. 
+
+---
 
 ## Project Definition 
 
@@ -19,11 +20,13 @@ You can find me on GitHub at [emilyemchen](https://github.com/emilyemchen) and o
 
 #### Andréanne
 
-I am a Master's student in Psychology currently enrolled at the University of Montréal. My main focus is in genomic imagery which consists of investigating the effect of genetic mutations on fonctional and structural brain phenotypes. More specifically, I have been interested in resting-state functional connectivity measures in carrier populations.
+I am a Master's student in Psychology currently enrolled at the University of Montréal. My main focus is in genomic imagery which consists of investigating the effect of genetic mutations on functional and structural brain phenotypes. More specifically, I have been interested in resting-state functional connectivity measures in carrier populations.
 
 #### Mikkel
 
 [TO DO]
+
+---
 
 ### Tools 
 
@@ -58,24 +61,68 @@ My project planned to rely on the following technologies:
 * `plotly`
 * HPC/Compute Canada
 
+---
+
 ### Data 
 
-The goal of this project is to compare different machine learning models and cross-validation methods and see how well each is able to predict autism from resting state fMRI data. For that we are using the [ABIDE data set](http://fcon_1000.projects.nitrc.org/indi/abide/) which combines data from 20 different research sites.
+The goal of this project is to compare different machine learning models and cross-validation methods and see how well each is able to predict autism from resting state fMRI data. For that we are using the preprocessed open source [ABIDE database](http://fcon_1000.projects.nitrc.org/indi/abide/) which contains structural, functional, and phenotypic data of 539 individuals with autism and 573 typical controls from 20 different research sites.
+
+---
 
 ### Deliverables 
 
+By the end of The BrainHack School, we hope to have the following: 
+* `README.md` file
+* `requirements.txt` file that outlines the packages needed to run the script
+* Jupyter notebooks with code and explanations
+* GitHub repository documenting project workflow
+* Presentation showing project results
 
+---
 
+## Project Results
 
-## Results
+### Becoming a Team 
+The three of us joined forces when we realized that we shared many similar learning goals and interests. With such similar project ideas, we figured we would accomplish more working together by each taking on a different cross-validation methods to train various machine learning models. 
 
-### Progress Overview
+---
 
-The data are processed in a standardized way using a Python script that prepares the data for the machine learning classifier. Several Jupyter notebooks then implement different models and cross-validation techniques which are described in detail below.
+### Team Project Management
 
-### Tools Learned
+We all shared a common interest in making our project as reproducible as possible. This goal meant creating a transparent, collaborative workflow that could be tracked at any time by anyone. To achieve this objective, we utilized the many features that GitHub has to offer, all of which you can see in action at our shared repository [here](https://github.com/brainhack-school2020/abide-fmri).
+* **Branches:** used to simultaneously on our own parts and then push changes to the master branch
+* **Pull requests:** created when making changes to the master branch
+* **Issues:** used to communicate with each other and keep track of tasks
+* **Tags:** used to keep issues organized
+* **Milestones:** used to keep our main goals in mind (Week 4 presentation and final deliverable)
+* **Projects:** used to track various aspects of our work 
 
+---
 
+### Standardized Data Preparation and Jupyter Notebooks
+
+The data are processed in a standardized way using a Python script that prepares the data for the machine learning classifiers. Several Jupyter notebooks then implement different models and cross-validation techniques which are described in detail below.
+
+---
+
+### Tools, Technologies, and Libraries Learned
+
+Many of these contribute to open science practices! 
+
+* Git/GitHub
+* Jupyter notebooks
+* Python
+* Visual Studio Code
+* `nilearn`
+* `scikit-learn`
+* `plotly`
+* `matplotlib`
+* `numpy` 
+* `pandas`
+* `seaborn`
+* `venv`
+
+---
 
 ### Deliverables
 
@@ -99,7 +146,7 @@ This notebook contains the code to run support vector classification, k nearest 
 
 [DESCRIPTION TO DO]
 
-#### Deliverable 2: [*`prepare_data.py`*](https://github.com/brainhack-school2020/abide-fmri/blob/master/code/prepare_data.py) script
+#### Deliverable 2: [`prepare_data.py`](https://github.com/brainhack-school2020/abide-fmri/blob/master/code/prepare_data.py) script
 
 This script
 
@@ -122,9 +169,9 @@ where
 
 The notebooks also call the `prepare_data` function from the preparation script.
 
-#### Deliverable 3: [*`requirements.txt`*](https://github.com/brainhack-school2020/abide-fmri/blob/master/requirements.txt) file 
+#### Deliverable 3: [`requirements.txt`](https://github.com/brainhack-school2020/abide-fmri/blob/master/requirements.txt) file 
 
-This file can help ensure that the scripts run correctly on any machine. To make sure that all scripts work correctly, you can create a virtual environment using pythons built-in library `venv`. To do this, follow these steps:
+This file increases reproducibility by helping to ensure that the scripts run correctly on any machine. To make sure that all scripts work correctly, you can create a virtual environment using pythons built-in library `venv`. To do this, follow these steps:
 
 1. Clone repo and navigate to folder in a shell
 2. Create a virtual environment in a folder of your choice: `python -m venv /path/to/folder`
@@ -169,8 +216,22 @@ The presentation slides can be viewed [here](https://www.canva.com/design/DAD-By
 
 This `README.md` file contains the content that will be shown on the BrainHack School website [project page](https://school.brainhackmtl.org/project/). 
 
+---
+
 ## Conclusion and Acknowledgement
 
 First and foremost, we would like to thank our Weeks 3 and 4 peer clinic mentor and co-organizer of the Brainhack School, Pierre Bellec. A special thank you as well to our Week 2 mentors Désirée Lussier-Lévesque, Alexa Pichet-Binette, and Sebastian Urchs. 
 
-Thank you also to the leaders and co-organizers Jean-Baptiste Poline, Tristan Glatard, and Benjamin de Leener, as well as the instructors and mentors Karim Jerbi, Elizabeth DuPre, Ross Markello, Peer Herholz, Samuel Guay, Valerie Hayot-Sasson, Greg Kiar, Jake Vogel, and Agâh Karakuzu. 
+Thank you also to The BrainHack School leaders and co-organizers Jean-Baptiste Poline, Tristan Glatard, and Benjamin de Leener, as well as the instructors and mentors Karim Jerbi, Elizabeth DuPre, Ross Markello, Peer Herholz, Samuel Guay, Valerie Hayot-Sasson, Greg Kiar, Jake Vogel, and Agâh Karakuzu. 
+
+## References 
+
+1. Choosing appropriate estimators with `scikit-learn` https://scikit-learn.org/stable/tutorial/machine_learning_map/
+
+2. Benchmarking functional connectome-based predictive models for resting-state fMRI (for classification estimator inspiration) https://hal.inria.fr/hal-01824205
+
+3. Getting the data using `nilearn.datasets.fetch` https://nilearn.github.io/modules/generated/nilearn.datasets.fetch_abide_pcp.html
+
+4. Python Data Science Handbook GitHub and website https://github.com/jakevdp/PythonDataScienceHandbook
+
+5. BrainHack School course materials and lectures https://github.com/neurodatascience/course-materials-2020
