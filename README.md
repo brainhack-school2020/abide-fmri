@@ -203,7 +203,7 @@ The presentation slides can be viewed [here](https://www.canva.com/design/DAD-By
 
 #### Deliverable 6: Overview of the project and results in the [`README.md`](https://github.com/brainhack-school2020/abide-fmri/blob/master/README.md) file
 
-This `README.md` file contains the content that will be shown on the BrainHack School website [project page](https://school.brainhackmtl.org/project/). 
+This `README.md` file contains the content that will be shown on The BrainHack School website [project page](https://school.brainhackmtl.org/project/). 
 
 ## Conclusion and Acknowledgement
 
