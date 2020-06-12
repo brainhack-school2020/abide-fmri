@@ -1,8 +1,6 @@
 # Predicting Autism with fMRI Data
 Contributors: Emily Chen, Andréanne Proulx, and Mikkel Schöttner
 
-[ADD PHOTO]
-
 Repository for the Brainhack School 2020 team working with resting state fMRI data from the ABIDE dataset to train machine learning models. 
 
 ## Project Definition 
