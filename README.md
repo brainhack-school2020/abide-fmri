@@ -28,7 +28,7 @@ Hey! i am a master's student in Cognitive Neuroscience at the University of Marb
 
 When getting into Brainhack School, I hoped to get a better understanding of machine learning, and how it is useful for analyzing fMRI data. I learned a lot about collaborative project organization, how to make pretty interactive plots and how to write better Python scripts. Brainhack School was really an awesome experience, getting to know a lot of talented and motivated people and being able to collaborate with them across the Atlantic!
 
-[TO DO]
+You can find me on Github at [mschoettner](https://github.com/mschoettner) and on Twitter [@mikkelschoett](https://twitter.com/mikkelschoett)
 
 ***
 
