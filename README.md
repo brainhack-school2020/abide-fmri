@@ -24,7 +24,11 @@ By joining the Brainhack School, I hoped to strengthen my computational skills a
 
 #### Mikkel [(personal repository)](https://github.com/brainhack-school2020/mschoettner_fMRI-ML)
 
-[TO DO]
+Hey! i am a master's student in Cognitive Neuroscience at the University of Marburg. My background is in psychology. I am especially interested in the social brain and how humans infer thoughts and emotions from the actions of others. Right now, I am doing my Master thesis on how the capacities of Theory of Mind and empathy interact in the brain, using fMRI. I am also very much interested in research methods and how we can use statistics and data science techniques on neuroimaging data.
+
+When getting into Brainhack School, I hoped to get a better understanding of machine learning, and how it is useful for analyzing fMRI data. I learned a lot about collaborative project organization, how to make pretty interactive plots and how to write better Python scripts. Brainhack School was really an awesome experience, getting to know a lot of talented and motivated people and being able to collaborate with them across the Atlantic!
+
+You can find me on Github at [mschoettner](https://github.com/mschoettner) and on Twitter [@mikkelschoett](https://twitter.com/mikkelschoett)
 
 ***
 
