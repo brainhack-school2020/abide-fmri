@@ -3,7 +3,7 @@ Contributors: Emily Chen, Andréanne Proulx, Mikkel Schöttner
 
 ![Cover-Image](graphics/cover-image.png)
 
-This repository contains contributions from the ABIDE team made during The BrainHack School 2020. This project uses resting state fMRI data from the ABIDE dataset to train machine learning models and is licensed under a Creative Commons Zero v1.0 Universal license. 
+This repository contains contributions from the [ABIDE team](https://github.com/orgs/brainhack-school2020/teams/abide-team) made during The BrainHack School 2020. This project uses resting state fMRI data from the ABIDE dataset to train machine learning models and is licensed under a Creative Commons Zero v1.0 Universal license. 
 
 ## Project Definition 
 
