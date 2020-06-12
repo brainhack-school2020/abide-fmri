@@ -33,7 +33,7 @@ By joining the Brainhack School, I hoped to strengthen my computational skills a
 We expected to use the following tools, technologies, and libraries for this project: 
 
 * Git
-* Github
+* GitHub
 * Visual Studio Code
 * Docker
 * Jupyter Notebook
