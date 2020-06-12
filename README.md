@@ -176,7 +176,8 @@ This file increases reproducibility by helping to ensure that the scripts run co
     * [PIQ Score Distribution by ABIDE Test Site](https://emilyemchen.github.io/bhs2020-dataviz/abide_piq.html)
 
 * [Andréanne's GitHub Repository](https://github.com/brainhack-school2020/anproulx-fMRI-autism)
-    * [Various data visualizations](https://chart-studio.plotly.com/~anproulx/2/data-visualization/#/)
+    * [Age Distribution for different sites]()
+    * [Validatin curve for SVM estimator (gamma and c)]()
 
 * [Mikkel's GitHub Repository](https://github.com/brainhack-school2020/mschoettner_fMRI-ML)
     * [Age Distributions at Different Research Sites](https://mschoettner.github.io/brainhack_visualization/)
