@@ -3,7 +3,7 @@ Contributors: Emily Chen, Andréanne Proulx, Mikkel Schöttner
 
 ![Cover-Image](graphics/cover-image.png)
 
-Repository for the Brainhack School 2020 team working with resting state fMRI data from the ABIDE dataset to train machine learning models. 
+This repository contains contributions from the ABIDE team made during The BrainHack School 2020. This project uses resting state fMRI data from the ABIDE dataset to train machine learning models and is licensed under a Creative Commons Zero v1.0 Universal license. 
 
 ## Project Definition 
 
@@ -18,9 +18,9 @@ You can find me on GitHub at [emilyemchen](https://github.com/emilyemchen) and o
 
 #### Andréanne [(personal repository)](https://github.com/brainhack-school2020/anproulx-fMRI-autism)
 
-Hi! I am an incoming master's student in Psychology at the University of Montreal. My background is in cognitive neuroscience and my career objective is to work on research projects aiming to discover new ways of characterizing the brain in its pathological states. At the moment, I am working with Sébastien Jacquemont and Pierre Bellec, and the focus of our research is in investigating the effect of genetic mutations on functional and structural brain phenotypes. More precisely, I have been working with resting-state functional connectivity measures in carrier populations with developmental disorders.
+Hi! I am an incoming master's student in Psychology at the University of Montreal. My background is in cognitive neuroscience and my career objective is to work on research projects aiming to discover new ways of characterizing the brain in its pathological states. At the moment, I am working with Sébastien Jacquemont and Pierre Bellec, and the focus of our research is on investigating the effect of genetic mutations on functional and structural brain phenotypes. More precisely, I have been working with resting-state functional connectivity measures in carrier populations with developmental disorders.
 
-By joining the Brainhack School, I hoped to strengthen my computational skills and my knowledge in the applications of machine learning to the field of neuroimaging. Not only did I get to work on a machine learning problem specific to my field, but I also got to learn about useful tools such as Github. More importantly, I also met a community of brilliant/aware researchers and got to collaborate with other students, even across the world!
+By joining the Brainhack School, I hoped to strengthen my computational skills and my knowledge in the applications of machine learning to the field of neuroimaging. Not only did I get to work on a machine learning problem specific to my field, but I also got to learn about useful tools such as GitHub. More importantly, I also met a community of brilliant/aware researchers and got to collaborate with other students, even across the world!
 
 #### Mikkel [(personal repository)](https://github.com/brainhack-school2020/mschoettner_fMRI-ML)
 
@@ -30,48 +30,28 @@ By joining the Brainhack School, I hoped to strengthen my computational skills a
 
 ### Tools 
 
-#### Emily
+We expected to use the following tools, technologies, and libraries for this project: 
 
-My project planned to incorporate the following tools and technologies: 
-
-* Python
-* `nilearn`
-* `scikit-learn`
-* MNE
-* Git/GitHub
+* Git
+* Github
 * Visual Studio Code
-* Terminal
-* Jupyter notebooks
-* Visualization packages (`matplotlib`, `seaborn`, `plotly`)
 * Docker
-
-#### Andréanne
-
-My project planned to rely on the following tools and libraries:
-* Jupyter notebooks
-* GitHub
-* `scikit-learn`, `nilearn`, `seaborn`, `matplotlib`, `pyplot`
-
-#### Mikkel
-
-My project planned to rely on the following technologies: 
-
-* `nilearn`
-* `scikit-learn`
-* `plotly`
+* Jupyter Notebook
 * HPC/Compute Canada
+* Python libraries: `numpy`, `pandas`, `matplotlib`, `scikit-learn`, `nilearn`, `seaborn`, `pyplot`, `pyplot`
+* `venv`
 
 ***
 
 ### Data 
 
-The goal of this project is to compare different machine learning models and cross-validation methods and see how well each is able to predict autism from resting state fMRI data. For that we are using the preprocessed open source [ABIDE database](http://fcon_1000.projects.nitrc.org/indi/abide/) which contains structural, functional, and phenotypic data of 539 individuals with autism and 573 typical controls from 20 different research sites.
+The goal of this project was to compare different machine learning models and cross-validation methods and see how well each is able to predict autism from resting state fMRI data. We used the preprocessed open source [ABIDE database](http://fcon_1000.projects.nitrc.org/indi/abide/), which contains structural, functional, and phenotypic data of 539 individuals with autism and 573 typical controls from 20 different research sites.
 
 ***
 
 ### Deliverables 
 
-By the end of The BrainHack School, we hope to have the following: 
+By the end of The BrainHack School, we aimed to have the following: 
 * `README.md` file
 * `requirements.txt` file that outlines the packages needed to run the script
 * Jupyter notebooks with code and explanations
@@ -84,7 +64,7 @@ By the end of The BrainHack School, we hope to have the following:
 
 ### Project Background 
 
-Several studies have found an altered connectivity profile in the default mode network of subjects with Autism Spectrum Disorder, or ASD (Anderson, 2014). Based on these findings, resting state fMRI data have been used to predict autism by training a classifier on the multi-site ABIDE data set (Nielsen et al., 2013). This project's scientific aim is to replicate these findings.
+Several studies have found an altered connectivity profile in the default mode network of subjects with Autism Spectrum Disorder, or ASD (Anderson, 2014). Based on these findings, resting state fMRI data have been used to predict autism by training a classifier on the multi-site ABIDE data set (Nielsen et al., 2013). This project's scientific aim is to replicate these findings and extends the literature by comparing the effects of differing cross-validation methods on various classification algorithms. 
 
 ### Becoming a Team 
 The three of us joined forces when we realized that we shared many similar learning goals and interests. With such similar project ideas, we figured we would accomplish more working together by each taking on a different cross-validation methods to train various machine learning models. 
@@ -93,8 +73,8 @@ The three of us joined forces when we realized that we shared many similar learn
 
 ### Team Project Management
 
-We all shared a common interest in making our project as reproducible as possible. This goal meant creating a transparent, collaborative workflow that could be tracked at any time by anyone. To achieve this objective, we utilized the many features that GitHub has to offer, all of which you can see in action at our shared repository [here](https://github.com/brainhack-school2020/abide-fmri).
-* **Branches:** used to simultaneously on our own parts and then push changes to the master branch
+We all shared a common interest in making our project as reproducible as possible. This goal involved creating a transparent, collaborative workflow that could be tracked at any time by anyone. To achieve this objective, we utilized the many features that GitHub has to offer, all of which you can see in action at our shared repository [here](https://github.com/brainhack-school2020/abide-fmri).
+* **Branches:** used to work simultaneously on our own parts and then push changes to the master branch
 * **Pull requests:** created when making changes to the master branch
 * **Issues:** used to communicate with each other and keep track of tasks
 * **Tags:** used to keep issues organized
@@ -119,7 +99,7 @@ Many of these contribute to open science practices!
 * **Git:** Track file changes
 * **GitHub:** Organize team workflow and project
 * **Machine learning:** Apply ML concepts and tools to the neuroimaging field
-* **`venv`:** Make `requirement.txt` file
+* **`venv`:** Make `requirement.txt` file for a reproducible virtual environment
 
 ***
 
@@ -188,11 +168,8 @@ This file increases reproducibility by helping to ensure that the scripts run co
 
 * [Emily's GitHub Repository](https://github.com/emilyemchen/bhs2020-dataviz)
     * [Age at Scan Distribution by ABIDE Test Site](https://emilyemchen.github.io/bhs2020-dataviz/abide_age.html)
-
     * [FIQ Score Distribution by ABIDE Test Site](https://emilyemchen.github.io/bhs2020-dataviz/abide_fiq.html)
-
     * [VIQ Score Distribution by ABIDE Test Site](https://emilyemchen.github.io/bhs2020-dataviz/abide_viq.html)
-
     * [PIQ Score Distribution by ABIDE Test Site](https://emilyemchen.github.io/bhs2020-dataviz/abide_piq.html)
 
 * [Andréanne's GitHub Repository](https://github.com/brainhack-school2020/anproulx-fMRI-autism)
@@ -203,7 +180,7 @@ This file increases reproducibility by helping to ensure that the scripts run co
 
 #### Deliverable 5: Presentation (Week 4)
 
-The presentation slides can be viewed [here](https://www.canva.com/design/DAD-ByEQaXI/QLgHbYgnKd-xDWJXVnaGDA/view) on Canva, which is the platform we used to create the slides. A video of our presentation can be viewed on this project page. We presented our work to the BrainHack School on June 5, 2020 using the RISE integration in a Jupyter notebook, which can be found [here](https://github.com/brainhack-school2020/abide-fmri/tree/master/presentation). 
+The presentation slides can be viewed [here](https://www.canva.com/design/DAD-ByEQaXI/QLgHbYgnKd-xDWJXVnaGDA/view) on Canva, which is the platform we used to create the slides. A video of our presentation can be viewed on this project page. We presented our work to The BrainHack School on June 5, 2020 using the RISE integration in a Jupyter notebook, which can be found [here](https://github.com/brainhack-school2020/abide-fmri/tree/master/presentation). 
 
 #### Deliverable 6: Overview of the project and results in the [`README.md`](https://github.com/brainhack-school2020/abide-fmri/blob/master/README.md) file
 
