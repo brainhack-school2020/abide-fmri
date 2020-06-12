@@ -126,9 +126,17 @@ This notebook contains the code to run linear support vector classification, k-n
 
 [*`group-kfolds-cv_classifier.ipynb`*](https://github.com/brainhack-school2020/abide-fmri/blob/master/code/group-kfolds-cv_classifier.ipynb)
 
-[DESCRIPTION TO DO]
+This notebook implements a 10-fold iterator variant to split the data into non-overlapping groups. It then runs four classification algorithms on the data: linear support vector machines (`LinearSVC`), *k*-nearest neighbors (`KNeighborsClassifier`), decision tree (`DecisionTreeClassifier`), and random forest (`RandomForestClassifier`). The most accurate classifier, `LinearSVC`, has an average accuracy score for all models of 63.5%, while the least accurate classifier, `RandomForestClassifier`, has an average accuracy score for all models of 52.6%. This latter percentage is not far off from the average accuracy scores of the other two classifiers. These scores are not particularly impressive, and one reason could be the data that this model is being trained on. Each site had differing processes, methods, and amounts of data they collected, so the lack of similarity could suggest less widespread generalizability. Future work into optimizing the parameters would be the logical next step. 
 
-##### What were the results? 
+##### Table 1: Group 10-fold cross validation average accuracy scores (percentages) per classifier algorithm
+| Algorithm | Average Score | Maximum Score | Minimum Score |
+| ----------|---------------|---------------|-------------- |
+| `LinearSVC` | 63.5% | 72.0% | 52.3%  |
+| `KNeighborsClassifier` | 55.2% | 66.7% | 48.7% |
+| `DecisionTreeClassifier` | 54.3% | 61.6% | 44.9% |
+| `RandomForestClassifier` | 52.6% | 60.5% | 39.7% |
+
+##### What were the overall results? 
 ![CV-Results](graphics/result_cv.png)
 
 #### Deliverable 2: [`prepare_data.py`](https://github.com/brainhack-school2020/abide-fmri/blob/master/code/prepare_data.py) script
@@ -176,8 +184,8 @@ This file increases reproducibility by helping to ensure that the scripts run co
     * [PIQ Score Distribution by ABIDE Test Site](https://emilyemchen.github.io/bhs2020-dataviz/abide_piq.html)
 
 * [Andréanne's GitHub Repository](https://github.com/brainhack-school2020/anproulx-fMRI-autism)
-    * [Age distribution](https://anproulx.github.io/publication_website/)
-    * [Influence of hyperparameter values gamma and C for SVM estimator](https://anproulx.github.io/cross_validation_plots/)
+    * [Age Distributions of Male and Female Subjects for Different Sites](https://anproulx.github.io/publication_website/)
+    * [Influence of Hyperparameter Values Gamma and C for SVM Estimator](https://anproulx.github.io/cross_validation_plots/)
 
 * [Mikkel's GitHub Repository](https://github.com/brainhack-school2020/mschoettner_fMRI-ML)
     * [Age Distributions at Different Research Sites](https://mschoettner.github.io/brainhack_visualization/)
