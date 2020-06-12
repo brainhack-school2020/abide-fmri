@@ -1,7 +1,7 @@
 # Predicting Autism with fMRI Data
 Contributors: Emily Chen, Andréanne Proulx, Mikkel Schöttner
 
-![Cover-Image](cover-image.png)
+![Cover-Image](graphics/cover-image.png)
 
 Repository for the Brainhack School 2020 team working with resting state fMRI data from the ABIDE dataset to train machine learning models. 
 
@@ -80,7 +80,7 @@ By the end of The BrainHack School, we hope to have the following:
 
 ## Project Results
 
-![ABIDE-Team](abide-team.png)
+![ABIDE-Team](graphics/abide-team.png)
 
 ### Project Background 
 
@@ -146,7 +146,7 @@ This notebook contains the code to run linear support vector classification, k-n
 [DESCRIPTION TO DO]
 
 ##### What were the results? 
-![CV-Results](result_cv.png)
+![CV-Results](graphics/result_cv.png)
 
 #### Deliverable 2: [`prepare_data.py`](https://github.com/brainhack-school2020/abide-fmri/blob/master/code/prepare_data.py) script
 
@@ -234,5 +234,3 @@ Thanks to all of you, this school was an amazing learning experience!
 Anderson, J. S., Patel, V. B., Preedy, V. R., & Martin, C. R. (2014). Cortical underconnectivity hypothesis in autism: evidence from functional connectivity MRI. Comprehensive Guide to Autism, 1457, 1471.
 
 Nielsen, J. A., Zielinski, B. A., Fletcher, P. T., Alexander, A. L., Lange, N., Bigler, E. D., ... & Anderson, J. S. (2013). Multisite functional connectivity MRI classification of autism: ABIDE results. Frontiers in Human Neuroscience, 7, 599.
-
-![test](abide-fmri/presentation/slides/1.png)
