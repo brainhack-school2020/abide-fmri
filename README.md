@@ -5,8 +5,6 @@ Contributors: Emily Chen, Andréanne Proulx, and Mikkel Schöttner
 
 Repository for the Brainhack School 2020 team working with resting state fMRI data from the ABIDE dataset to train machine learning models. 
 
----
-
 ## Project Definition 
 
 ### Personal Backgrounds
@@ -77,8 +75,6 @@ By the end of The BrainHack School, we hope to have the following:
 * Jupyter notebooks with code and explanations
 * GitHub repository documenting project workflow
 * Presentation showing project results
-
----
 
 ## Project Results
 
@@ -215,8 +211,6 @@ The presentation slides can be viewed [here](https://www.canva.com/design/DAD-By
 #### Deliverable 6: Overview of the project and results in the [`README.md`](https://github.com/brainhack-school2020/abide-fmri/blob/master/README.md) file
 
 This `README.md` file contains the content that will be shown on the BrainHack School website [project page](https://school.brainhackmtl.org/project/). 
-
----
 
 ## Conclusion and Acknowledgement
 
