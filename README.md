@@ -87,6 +87,9 @@ We all shared a common interest in making our project as reproducible as possibl
 
 The data are processed in a standardized way using a Python script that prepares the data for the machine learning classifiers. Several Jupyter notebooks then implement different models and cross-validation techniques which are described in detail below.
 
+![Step1-2](graphics/step1-2.png)
+![Step3](graphics/step3.png)
+
 ***
 
 ### Tools, Technologies, and Libraries Learned
