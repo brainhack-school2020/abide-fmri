@@ -1,9 +1,12 @@
-# Predicting Autism with fMRI Data
+# Using fMRI Data to Predict Autism Diagnoses with Various Machine Learning Models and Cross-Validation Methods
+
 Contributors: Emily Chen, Andréanne Proulx, Mikkel Schöttner
 
 ![Cover-Image](graphics/cover-image.png)
 
 This repository contains contributions from the [ABIDE team](https://github.com/orgs/brainhack-school2020/teams/abide-team) made during The BrainHack School 2020. This project uses resting state fMRI data from the ABIDE dataset to train machine learning models and is licensed under a Creative Commons Zero v1.0 Universal license. 
+
+Please feel free to reach out to any of us if you have any questions or comments!  
 
 ## Project Definition 
 
@@ -28,7 +31,7 @@ Hey! I am a master's student in Cognitive Neuroscience at the University of Marb
 
 When getting into Brainhack School, I hoped to get a better understanding of machine learning, and how it is useful for analyzing fMRI data. I learned a lot about collaborative project organization, how to make pretty interactive plots and how to write better Python scripts. Brainhack School was really an awesome experience getting to know a lot of talented and motivated people and being able to collaborate with them across the Atlantic!
 
-You can find me on Github at [mschoettner](https://github.com/mschoettner) and on Twitter [@mikkelschoett](https://twitter.com/mikkelschoett). 
+You can find me on GitHub at [mschoettner](https://github.com/mschoettner) and on Twitter [@mikkelschoett](https://twitter.com/mikkelschoett). 
 
 ***
 
