@@ -1,5 +1,5 @@
 argparse==1.1
-scikit-learn==0.22.1
+scikit-learn==1.5.0
 pandas==1.0.3
 numpy==1.22.0
 nilearn==0.6.2
